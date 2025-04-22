@@ -13,7 +13,7 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>>
             <! -- ===== Style Swicher ===== -- >
             <link rel="stylesheet" href="skincolor.css">
             <link rel="stylesheet" href="color-1.css" class="alternate-style" title="color-1"
@@ -32,21 +32,32 @@
             <! -- ===== Main Container Start ===== -- >
             <div class="main Container">
                 <! -- ===== Aside Start ===== -- >
-                <div class="Aside">
-                    <div class="Logo">
-                    <a href="#"><span>A</span>tlas</a>
-                    </div>
-                    <div class="nav-toggler">
-                        <span></span>
+                <div class="aside" id="sidebar">
+                    <div class="logo">
+                        <a href="#"><span>A</span>tlas</a>
                     </div>
                     <ul class="nav">
-                        <li><a href="#home" class="active"><i class="fa fa-home" aria-hidden="true"></i></i>Home</a></li>
-                        <li><a href="#about"><i class="fa fa-user" aria-hidden="true"></i></i> About</a></li>
-                        <li><a href="#service"><i class="fa fa-list" aria-hidden="true"></i></i> Services</a></li>
-                        <li><a href="#portfolio"><i class="fa fa-briefcase" aria-hidden="true"></i></i>Portfolio</a></li>
-                        <li><a href="#contact"><i class="fa fa-comments" aria-hidden="true"></i></i>Contact</a></li>
-                        </ul> 
+                        <li><a href="#home" class="active"><i class="fa fa-home"></i> Home</a></li>
+                        <li><a href="#about"><i class="fa fa-user"></i> About</a></li>
+                        <li><a href="#service"><i class="fa fa-list"></i> Services</a></li>
+                        <li><a href="#portfolio"><i class="fa fa-briefcase"></i> Portfolio</a></li>
+                        <li><a href="#contact"><i class="fa fa-comments"></i> Contact</a></li>
+                    </ul>
                 </div>
+                
+                <!-- Menu Icon (outside of .aside so it's always visible) -->
+                <div class="nav-toggler" onclick="toggleSidebar()">
+                    <span></span>
+                </div>
+                
+                <!-- Script to toggle sidebar -->
+                <script>
+                function toggleSidebar() {
+                    document.getElementById("sidebar").classList.toggle("open");
+                }
+                </script>
+                
+                
                 <! -- ===== Aside End ===== -- >
                 <! -- ===== Main Content Start ===== -- >
                 <div class="main-content">
@@ -115,7 +126,8 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="buttons padd-15">
-                                                        <a href="#" class="btn">Downlod CV</a>
+                                                        <a href="https://www.figma.com/proto/IeHFajOKA4iFO7p04WnILM?node-id=0-1&t=F6SvBBaLtoWLntas-6"  class="btn">Downlod CV</a>
+                                                        
                                                         <a href="#contact" class="btn hire-me">Hire me</a>
                                                     </div>
                                                 </div>
@@ -361,7 +373,9 @@
                                 <div class="portfolio-item padd-15">
                                     <div class="portfolio-item-inner shadow-dark">
                                         <div class="portfolio-img">
+                                            <a href="https://www.figma.com/proto/LXNU3alRXppSd71GIDvSHB?node-id=0-1&t=QGNUfKiEnWFeFpS8-6">
                                             <img src="WhatsApp Image 2025-04-09 at 20.32.40.jpeg">
+                                        </a>
                                         </div>
                                     </div>
                                 </div>
