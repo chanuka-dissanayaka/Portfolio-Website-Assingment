@@ -49,15 +49,29 @@
                 <div class="nav-toggler" onclick="toggleSidebar()">
                     <span></span>
                 </div>
-                
-                <!-- Script to toggle sidebar -->
+
                 <script>
                 function toggleSidebar() {
                     document.getElementById("sidebar").classList.toggle("open");
                 }
                 </script>
-                
-                
+                <script>
+                    function toggleSidebar() {
+                      const sidebar = document.getElementById("sidebar");
+                      sidebar.classList.toggle("open");
+                    }
+                    document.addEventListener("click", function (e) {
+                      const sidebar = document.getElementById("sidebar");
+                      const toggler = document.querySelector(".nav-toggler");
+                      if (
+                        sidebar.classList.contains("open") &&
+                        !sidebar.contains(e.target) &&
+                        !toggler.contains(e.target)
+                      ) {
+                        sidebar.classList.remove("open");
+                      }
+                    });
+                  </script>
                 <! -- ===== Aside End ===== -- >
                 <! -- ===== Main Content Start ===== -- >
                 <div class="main-content">
@@ -111,7 +125,7 @@
                                                     <p>Email : <span>chanuka@gmail.com</span></p>
                                                 </div>
                                                 <div class="info-item padd-15">
-                                                    <p>diploma : <span>HNDIT/NDICT</span></p>
+                                                    <p>Diploma : <span>HNDIT/NDICT</span></p>
                                                 </div>
                                                 <div class="info-item padd-15">
                                                     <p>NvQ : <span>Computer Hardware
